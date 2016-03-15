@@ -1,0 +1,47 @@
+<html>
+ <head>
+ 	<meta charset = "utf-8">
+ 	<title></title>
+ 	<style>
+ 	   body{
+
+ 	   }
+ 	</style>
+ 	<script>
+ 	window.onload=function(){
+ 	   var aImg = document.getElementsByTagName('img');
+ 	   function toDou(n){
+            if(n<10){ return '0'+n;}
+            else{ return ''+n;}
+ 	   }
+
+ 	   function tick(){
+ 	   	var oDate = new Date();
+ 	  
+ 	   
+ 	   var str = toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+ 	   console.log(str);
+ 	   for (var i=0;i<aImg.length;i++){
+ 	   	aImg[i].src=''+str[i]+'.png';
+ 	   }
+ 	   }
+ 	   setInterval(tick,1000);
+ 	   tick();
+ 	  
+
+ 	   
+ 	}
+ 	  
+ 	</script>
+ </head>
+ <body>
+ 	<img src="1.png"/>
+ 	<img src="0.png"/>
+ 	:
+ 	<img src="0.png"/>
+ 	<img src="0.png"/>
+ 	:
+ 	<img src="0.png"/>
+ 	<img src="0.png"/>
+ </body>
+</html>

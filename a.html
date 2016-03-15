@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>
+
+</style>
+<script>
+function GetBytes(str){
+	var len = str.length;
+	console.log(len);
+	var bytes = len;
+	for(var i=0;i<len;i++){
+		if(str.charCodeAt(i)>255) bytes++;
+	}
+	return bytes;
+}
+alert(GetBytes("您好,as"));
+</script>
+</head>
+<body>
+
+</body>
+</html>
